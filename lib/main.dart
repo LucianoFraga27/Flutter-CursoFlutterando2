@@ -7,8 +7,21 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.blue
+    return MaterialApp(
+      home: Home(),
+    );
+  }
+}
+
+class Home extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return  Scaffold(
+        body: Center(
+            child: Text(
+              "Curso 03 Flutter",
+            )
+        )
     );
   }
 }
