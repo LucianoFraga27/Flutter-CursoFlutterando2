@@ -40,7 +40,6 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-
   final controller = TextEditingController();
 
   final lista = <String>[];
@@ -48,7 +47,9 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text("curso"),),
+        appBar: AppBar(
+          title: Text("curso"),
+        ),
         body: Center(
           child: Stack(
             alignment: Alignment.center,
@@ -56,21 +57,24 @@ class _HomeState extends State<Home> {
               SizedBox(
                 height: MediaQuery.of(context).size.height,
                 width: MediaQuery.of(context).size.width,
-                child:Image.asset("assets/imgs/space.jpg", fit: BoxFit.cover),
+                child: Image.asset("assets/imgs/space.jpg", fit: BoxFit.cover),
               ),
               Container(
                   height: MediaQuery.of(context).size.height,
                   width: MediaQuery.of(context).size.width,
                   color: Colors.black.withOpacity(0.60) //Máscara
-              ),
-              Container(
-                  height:80,
-                  width: 80,
-                  color: Colors.green
-              ),
+                  ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height,
+                width: MediaQuery.of(context).size.width,
+                child: Column(
+                  children: [
+                    FlutterLogo(size:150)
+                  ],
+                ),
+              )
             ],
           ),
-        )
-        );
+        ));
   }
 }
