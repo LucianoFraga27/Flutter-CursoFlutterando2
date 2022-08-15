@@ -53,28 +53,21 @@ class _HomeState extends State<Home> {
           child: Stack(
             alignment: Alignment.center,
             children: [
-              Image.asset("assets/imgs/space.jpg",
-              fit: BoxFit.cover),
+              SizedBox(
+                height: MediaQuery.of(context).size.height,
+                width: MediaQuery.of(context).size.width,
+                child:Image.asset("assets/imgs/space.jpg", fit: BoxFit.cover),
+              ),
               Container(
-                height:100,
-                width: 100,
-                color: Colors.red
+                  height: MediaQuery.of(context).size.height,
+                  width: MediaQuery.of(context).size.width,
+                  color: Colors.black.withOpacity(0.60) //Máscara
               ),
               Container(
                   height:80,
                   width: 80,
                   color: Colors.green
               ),
-              Container(
-                  height:60,
-                  width: 60,
-                  color: Colors.yellow
-              ),
-              Container(
-                  height:40,
-                  width: 40,
-                  color: Colors.lightBlue
-              )
             ],
           ),
         )
