@@ -49,37 +49,32 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(title: Text("curso"),),
-        body: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(12.0),
-              child: Row(
-                children: [
-                  Expanded(child: TextField(controller: controller,)),
-                  IconButton(onPressed: (){
-                    final texto = controller.text;
-                    setState(
-                        () {
-                          lista.add(texto);
-                        }
-                    );
-                    controller.clear();
-                  }, icon: const Icon(Icons.add))
-                ],
+        body: Center(
+          child: Stack(
+            alignment: Alignment.center,
+            children: [
+              Container(
+                height:100,
+                width: 100,
+                color: Colors.red
               ),
-            ),
-            Expanded(
-              child: ListView.builder(
-                  itemCount: lista.length,
-                  itemBuilder: (context, index){
-                    final item = lista[index];
-                    return ListTile(
-                      title: Text(item),
-                    );
-                  }
+              Container(
+                  height:80,
+                  width: 80,
+                  color: Colors.green
               ),
-            )
-          ],
+              Container(
+                  height:60,
+                  width: 60,
+                  color: Colors.yellow
+              ),
+              Container(
+                  height:40,
+                  width: 40,
+                  color: Colors.lightBlue
+              )
+            ],
+          ),
         )
         );
   }
