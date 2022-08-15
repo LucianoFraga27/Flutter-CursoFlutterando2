@@ -53,6 +53,8 @@ class _HomeState extends State<Home> {
           child: Stack(
             alignment: Alignment.center,
             children: [
+              Image.asset("assets/imgs/space.jpg",
+              fit: BoxFit.cover),
               Container(
                 height:100,
                 width: 100,
