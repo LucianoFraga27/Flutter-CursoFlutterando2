@@ -48,34 +48,20 @@ class _HomeState extends State<Home> {
     return Scaffold(
         appBar: AppBar(title: Text("curso"),),
         body: Center(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                height: 80,
-                width: 80,
-                color: Colors.red,
-              ),
-              Container(
-                height: 10,
-                width: 10,
-              ),
-              Container(
-                height: 80,
-                width: 80,
-                color: Colors.green,
-              ),
-              Container(
-                height: 10,
-                width: 10,
-              ),
-              Container(
-                height: 80,
-                width: 80,
-                color: Colors.blue,
-              ),
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                for(int i = 0; i < 20; i++)
+                  Container(
+                    height: 80,
+                    width: double.infinity,
+                    margin: EdgeInsets.all(20),
+                    color: Colors.green,
+                  ),
+              ],
+            ),
           )
         )
     );
