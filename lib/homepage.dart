@@ -1,24 +1,32 @@
 
+import 'package:curso_02_flutterando/home_controller.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
+    var controller = HomeController.of(context);
+
     return Scaffold(
         appBar: AppBar(
           title: Text("home"),
         ),
         floatingActionButton: FloatingActionButton(
-            onPressed: (){print("clicou");},
+            onPressed: (){
+              controller.increment();
+            },
             child: Icon(
               Icons.add_a_photo,
             )
         ),
         body: Center(
             child: Text(
-              "Curso 03 Flutter",
+              "Contador ${controller.value}",
             )
         )
     );
   }
 }
+
+
