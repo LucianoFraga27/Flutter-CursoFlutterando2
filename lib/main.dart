@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,6 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Home(),
+      theme: ThemeData.dark(),
     );
   }
 }
@@ -16,7 +19,16 @@ class MyApp extends StatelessWidget {
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
+        appBar: AppBar(
+          title: Text("home"),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: (){print("clicou");},
+          child: Icon(
+              Icons.add_a_photo,
+          )
+        ),
         body: Center(
             child: Text(
               "Curso 03 Flutter",
