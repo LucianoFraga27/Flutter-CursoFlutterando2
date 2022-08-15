@@ -11,7 +11,6 @@ class MyApp extends StatelessWidget {
       home: HomeController(
         child: Home(),
       ),
-      theme: ThemeData.dark(),
     );
   }
 }

@@ -46,21 +46,38 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text("home"),
-        ),
-        floatingActionButton: FloatingActionButton(
-            onPressed: () {
-              setState((){
-                counter++;
-              });
-            },
-            child: Icon(
-              Icons.add_a_photo,
-            )),
+        appBar: AppBar(title: Text("curso"),),
         body: Center(
-            child: Text(
-          "Contador ${counter}",
-        )));
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                height: 80,
+                width: 80,
+                color: Colors.red,
+              ),
+              Container(
+                height: 10,
+                width: 10,
+              ),
+              Container(
+                height: 80,
+                width: 80,
+                color: Colors.green,
+              ),
+              Container(
+                height: 10,
+                width: 10,
+              ),
+              Container(
+                height: 80,
+                width: 80,
+                color: Colors.blue,
+              ),
+            ],
+          )
+        )
+    );
   }
 }
